@@ -1,8 +1,8 @@
 ### How to Build a JavaScript Calculator?
 
 ### Requirements for building a calculator using JavaScript
-## Integrated Development Environment
-## Local Server/online compiler
+### Integrated Development Environment
+### Local Server/online compiler
 
 ### Embedding CSS
 
