@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #22272a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60vh;
+        }
+        .main-div{
+           background-color:#3e4243;
+           filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+           height: 60vh;
+           
+        }
+        .common-div{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; 
+        }
+        .calc{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        
+        input[type="button"]
+        {
+        min-height: 50px;
+        background-color:#efefef;
+        color: black;
+        width:100%;
+        border: solid 1px #dedede;
+        }
+         
+        input[type="text"]
+        {
+            width: 85%;
+            text-align: right;
+            background-color: white;
+            border: none;
+            padding: 12px;
+            border: none;
+            height: 24px;
+          
+        }
+        </style>
+    <script>
+        //function for displaying values
+        function dis(val)
+        {
+        document.getElementById("learn").value+=val
+         }
+        //function for evaluation
+        function solve()
+        {
+        let x = document.getElementById("learn").value
+        let y = eval(x)
+        document.getElementById("learn").value = y
+        }
+        //function for clearing the display
+        function clr()
+        {
+        document.getElementById("learn").value = ""
+        }
+        function deletes()
+        {
+        document.getElementById("learn").value = ""
+        }
+        </script>
+</head>
+<body>
+    <!-- create table -->
+<body>
+  
+    <table >
+        <div class="main-div">
+   <div class="common-div"> 
+    <!--  -->
+  <input type="text" id="learn"/>
+    <!-- clr() function will call clr to clear all value -->
+    
+<div class="calc">
+  
+  <input type="button" value="AC" onclick="clr()"/>
+  <input type="button" value="DEL" onclick="deletes()"/>
+   
+  
+ </div>
+ <div class="calc">
+    
+   <input type="button" value="1" onclick="dis('1')"/>
+   <input type="button" value="2" onclick="dis('2')"/> 
+   <input type="button" value="3" onclick="dis('3')"/>
+   <input type="button" value="+" onclick="dis('+')"/>
+    <!-- creating buttons and assigning values-->
+</div>
+    
+<div class="calc">
+    
+  <input type="button" value="4" onclick="dis('4')"/> 
+   <input type="button" value="5" onclick="dis('5')"/> 
+   <input type="button" value="6" onclick="dis('6')"/> 
+   <input type="button" value="-" onclick="dis('-')"/>
+    </div>
+    <div class="calc"> 
+      
+  <input type="button" value="7" onclick="dis('7')"/> 
+   <input type="button" value="8" onclick="dis('8')"/> 
+    <input type="button" value="9" onclick="dis('9')"/> 
+    <input type="button" value="*" onclick="dis('*')"/>
+</div>
+     
+<div class="calc">
+  
+   <input type="button" value="." onclick="dis('.')"/> 
+  <input type="button" value="0" onclick="dis('0')"/>
+    <!-- Evaluating function call eval()-->
+  <input type="button" value="=" onclick="solve()"/>  
+  <input type="button" value="/" onclick="dis('/')"/>   
+</div>
+    </body>
+    
+    
+
+</html>
